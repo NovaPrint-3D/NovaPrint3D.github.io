@@ -11,15 +11,15 @@
         }, 2000);
     }
 
-    // Buscador de productos
-    const searchInput = document.getElementById("search");
-    searchInput.addEventListener("keyup", (e) => {
-        const term = e.target.value.toLowerCase();
-        document.querySelectorAll(".producto").forEach(producto => {
-            const title = producto.querySelector("h3").innerText.toLowerCase();
-            producto.style.display = title.includes(term) ? "block" : "none";
-        });
-    });
+    //* Buscador de productos 
+    //const searchInput = document.getElementById("search");
+    //searchInput.addEventListener("keyup", (e) => {
+    //    const term = e.target.value.toLowerCase();
+    //    document.querySelectorAll(".producto").forEach(producto => {
+    //        const title = producto.querySelector("h3").innerText.toLowerCase();
+   //         producto.style.display = title.includes(term) ? "block" : "none";
+   //     });
+   // });
 
     // Animaciones de hover en productos
     document.querySelectorAll(".producto").forEach(producto => {
