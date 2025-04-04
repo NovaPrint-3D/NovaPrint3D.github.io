@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaPrint3D - Tienda Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="java/style.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+   (function(){
+      emailjs.init("uWXmx_Lxo4layvaE9"); // Reemplaza con tu Public Key de EmailJS
+   })();
+</script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo"> 
+            <h1>NovaPrint3D</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle">☰</button>
+    </header>
+    <section id="inicio" class="hero" aria-labelledby="inicio-title">
+        <div class="hero-content">
+            <h2 id="inicio-title">NovaPrint3D: Innovación y Creatividad en 3D</h2>
+            <p>Transformamos tus ideas en realidad con la tecnología más avanzada de impresión 3D. Desde productos personalizados hasta soluciones creativas para tus proyectos más ambiciosos.</p>
+            <a href="#productos" class="btn-primary">Ver Productos</a>
+        </div>
+    </section>
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        <h2>Colores Disponibles</h2>
+        <div class="colores-grid">
+            <div class="box rosa">Rosa</div>
+            <div class="box rojo">Rojo</div>
+            <div class="box azul">Azul</div>
+            <div class="box blanco">Blanco</div>
+            <div class="box negro">Negro</div>
+            <div class="box verde">Verde</div>
+        </div>
+        <input type="text" id="search" placeholder="Buscar productos...">
+        <!-- Div para mostrar los productos -->
+        <div id="product-container"></div>
+
+  <!-- Controles de paginación -->
+  <div id="pagination">
+    <button class="page-link" data-page="1">1</button>
+    <button class="page-link" data-page="2">2</button>
+    <button class="page-link" data-page="3">3</button>
+    <!-- Puedes generar más botones dinámicamente con JS si lo deseas -->
+  </div>
+    </section>
+    <section id="imprimir-diseños" class="imprimir-diseños">
+        <!-- Sección de Thingiverse -->
+        <div class="imprimir-sitio thingiverse">
+            <h2>Imprime cualquier diseño de Thingiverse</h2>
+            <p>Podemos hacer realidad cualquier impresión 3D de la página <a href="https://www.thingiverse.com/" target="_blank">Thingiverse</a>. Solo envíanos el modelo que deseas imprimir.</p>
+            <a href="https://www.thingiverse.com/" target="_blank" class="btn-imprimir">Explorar Thingiverse</a>
+        </div>
+        <!-- Sección de Free3D -->
+        <div class="imprimir-sitio free3d">
+            <h2>Imprime cualquier diseño de Free3D</h2>
+            <p>Podemos hacer realidad cualquier impresión 3D de la página <a href="https://free3d.com/es/modelos-3d/" target="_blank">Free3D</a>. Solo envíanos el modelo que deseas imprimir.</p>
+            <a href="https://free3d.com/es/modelos-3d/" target="_blank" class="btn-imprimir">Explorar Free3D</a>
+        </div>
+        <!-- Sección de MyMiniFactory -->
+        <div class="imprimir-sitio myminifactory">
+            <h2>Imprime cualquier diseño de MyMiniFactory</h2>
+            <p>Podemos hacer realidad cualquier impresión 3D de la página <a href="https://www.myminifactory.com/" target="_blank">MyMiniFactory</a>. Solo envíanos el modelo que deseas imprimir.</p>
+            <a href="https://www.myminifactory.com/" target="_blank" class="btn-imprimir">Explorar MyMiniFactory</a>
+        </div>
+        <!-- Sección de Pinshape -->
+        <div class="imprimir-sitio pinshape">
+            <h2>Imprime cualquier diseño de Pinshape</h2>
+            <p>Podemos hacer realidad cualquier impresión 3D de la página <a href="https://pinshape.com/" target="_blank">Pinshape</a>. Solo envíanos el modelo que deseas imprimir.</p>
+            <a href="https://pinshape.com/" target="_blank" class="btn-imprimir">Explorar Pinshape</a>
+        </div>
+        <!-- Sección de Yeggi -->
+        <div class="imprimir-sitio yeggi">
+            <h2>Imprime cualquier diseño de Yeggi</h2>
+            <p>Podemos hacer realidad cualquier impresión 3D de la página <a href="https://www.yeggi.com/" target="_blank">Yeggi</a>. Solo envíanos el modelo que deseas imprimir.</p>
+            <a href="https://www.yeggi.com/" target="_blank" class="btn-imprimir">Explorar Yeggi</a>
+        </div>
+        <!-- Espacio para agregar más sitios en el futuro -->
+        <div class="imprimir-sitio otro-sitio">
+            <h2>Explora más sitios de modelos 3D</h2>
+            <p>Aquí podrás encontrar otros sitios para imprimir tus modelos 3D favoritos.</p>
+            <!-- Puedes agregar más enlaces aquí -->
+        </div>
+    </section>
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <form action="mailto:romeroflo2906@gmail.com" method="post" enctype="multipart/form-data">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="date">Fecha de hoy</label>
+            <input type="date" id="date" name="date" required>
+            <label for="mensaje">Mensaje (Nombre del producto que requieres y Color que del producto):</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Sección de información sobre la empresa -->
+            <div class="footer-info">
+                <h3>Sobre NovaPrint3D</h3>
+                <p>NovaPrint3D es una empresa innovadora en el mundo de la impresión 3D. Nos especializamos en crear productos personalizados de alta calidad, desde accesorios hasta piezas más complejas, utilizando la última tecnología para dar vida a tus ideas. Transformamos la creatividad en realidad con cada impresión.</p>
+            </div>
+            <!-- Sección de contacto -->
+            <div class="footer-contact">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><strong>Email:</strong> romeroflo2906@gmail.com</li>
+                </ul>
+            </div>
+            <!-- Sección de redes sociales -->
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="" target="_blank">Facebook</a></li>
+                    <li><a href="" target="_blank">Instagram</a></li>
+                    <li><a href="" target="_blank">Twitter</a></li>
+                    <li><a href="" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>&copy; 2025 NovaPrint3D. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
